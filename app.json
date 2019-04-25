@@ -28,7 +28,8 @@
       "pages": [
         "pages/components/components",
         "pages/views/views",
-        "pages/steps/steps"
+        "pages/steps/steps",
+        "pages/scrollSteps/scrollSteps"
       ],
       "independent": true
     }

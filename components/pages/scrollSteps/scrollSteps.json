@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "SCROLL STEPS DEMO",
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#EEE",
+  "backgroundTextStyle": "light"
+}

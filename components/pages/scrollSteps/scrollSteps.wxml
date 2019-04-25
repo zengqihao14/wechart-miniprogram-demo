@@ -1,0 +1,28 @@
+<view class="container scroll-steps-container">
+	<view class="side-steps-container">
+		<view class="side-steps-container">
+			<view wx:for="{{steps}}" wx:for-index="idx" wx:for-item="stepName" wx:key="idx" class="side-steps-wrapper">
+				<view
+					class="side-steps-item {{idx === currentIdx ? 'is-current' : ''}} {{idx < currentIdx ? 'is-passed' : ''}}"
+				>{{stepName}}</view>
+				<view
+					class="side-steps-line"
+					style="background-size: 100% {{stepProgress[idx]}}%;"
+					wx:if="{{idx < steps.length - 1}}"
+				/>
+			</view>
+		</view>
+	</view>
+	<view class="main-container">
+		<text class="scroll-steps-title">SCROLL & STEPS DEMO</text>
+		<view id="step-1" class="step-content">
+			<text class="step-content-title">STEP 1</text>
+		</view>
+		<view id="step-2" class="step-content">
+			<text class="step-content-title">STEP 2</text>
+		</view>
+		<view id="step-3" class="step-content">
+			<text class="step-content-title">STEP 3</text>
+		</view>
+	</view>
+</view>

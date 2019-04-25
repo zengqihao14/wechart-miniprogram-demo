@@ -1,0 +1,66 @@
+.side-steps-container {
+    box-sizing: border-box;
+    position: relative;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+}
+
+.side-steps-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-steps-item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #333;
+    color: #333;
+    background-color: #FFF;
+    transition: font .48s ease, color .48s ease, border .48s ease, background-color .48s ease, width .48s ease, height .48s ease, line-height .48s ease;
+}
+
+.side-steps-line {
+    position: relative;
+    display: block;
+    width: 2px;
+    margin: 5px 0;
+    height: 100px;
+    background-color: rgba(0, 0, 0, .15);
+    transition: border-color .35s linear, background-size .35s linear;
+    background-image: linear-gradient(#333, #333);
+    background-repeat: no-repeat;
+    background-size: 100% 0%;
+    background-position: top;
+}
+
+.side-steps-item.is-current {
+    border: 2px solid #333;
+    color: #FFF;
+    background-color: #333;
+    font-size: 16px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+}
+.side-steps-item.is-passed {
+    border: 2px solid #777;
+    color: #FFF;
+    background-color: #777;
+}

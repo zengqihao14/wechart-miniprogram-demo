@@ -4,5 +4,6 @@
 	<view class="navigator-area ">
 		<navigator class="components-navigator" url="../views/views">Views</navigator>
 		<navigator class="components-navigator" url="../steps/steps">Steps</navigator>
+		<navigator class="components-navigator" url="../scrollSteps/scrollSteps">Scroll Steps</navigator>
 	</view>
 </view>
