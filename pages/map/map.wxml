@@ -1,0 +1,6 @@
+<!--map.wxml-->
+<view class="container map">
+    <p class="map-title">{{ mapTitle }}</p>
+    <image lazy-load class="image-item" src="../../assets/images/sample_poster.jpg" />
+    <map bindmarkertap="markertap" longitude="{{lng}}" latitude="{{lat}}"></map>
+</view>

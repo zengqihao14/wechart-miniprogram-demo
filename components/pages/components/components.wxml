@@ -1,0 +1,8 @@
+<!--components.wxml-->
+<view class="container components-container">
+	<p class="components-title">Components Demo</p>
+	<view class="navigator-area ">
+		<navigator class="components-navigator" url="../views/views">Views</navigator>
+		<navigator class="components-navigator" url="../steps/steps">Steps</navigator>
+	</view>
+</view>

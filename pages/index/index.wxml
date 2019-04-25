@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo {{isLoaded ? 'fadeIn' : ''}}">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindMapBtnTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto {{isLoaded ? 'fadeIn' : ''}}">
+    <text class="user-motto">{{motto}}</text>
+    <form>
+      <input class="userInput" placeholder="please input something.." name="userinput" type="text" />
+    </form>
+    <div class="navigator-area">
+      <navigator class="components-navigator" url="{{logsButton.PATH}}">{{logsButton.LABEL}}</navigator>
+      <navigator class="components-navigator" url="{{mapButton.PATH}}">{{mapButton.LABEL}}</navigator>
+      <navigator class="components-navigator" url="{{svgaButton.PATH}}">{{svgaButton.LABEL}}</navigator>
+      <navigator class="components-navigator" url="{{componentButton.PATH}}">{{componentButton.LABEL}}</navigator>
+    </div>
+  </view>
+</view>

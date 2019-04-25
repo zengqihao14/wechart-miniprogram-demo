@@ -1,0 +1,23 @@
+<!--svga.wxml-->
+<view class="container svga-container">
+    <p class="svga-title">{{svgaTitle}}</p>
+    <div class="svgaItem-wrapper">
+        <view
+                class="svgaItem {{svgaLoaded ? 'hasLoaded' : ''}}"
+                wx:for="{{svgaSources}}"
+                wx:for-index="idx"
+                wx:for-item="item"
+                wx:key="idx"
+        >
+            <cover-view class="svgaItem-title">{{item.title}}</cover-view>
+            <canvas class="svgaItem-canvas" canvas-id="svga-canvas-{{idx}}" bindtouchend="handleSVGATab"></canvas>
+        </view>
+        <div class="svgaItem hasLoaded">
+            <cover-view class="svgaItem-title">Test Title</cover-view>
+            <canvas class="svgaItem-canvas" canvas-id="svga-canvas-test" bindtouchend="handleSVGATab"></canvas>
+        </div>
+        <div class="svgaItem hasLoaded">
+            <image class="svgaItem-canvas" src="{{radarImg}}" />
+        </div>
+    </div>
+</view>

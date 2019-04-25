@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "VIEWS DEMO",
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#EEE",
+  "backgroundTextStyle": "light"
+}

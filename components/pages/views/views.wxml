@@ -1,0 +1,57 @@
+<view class="container components-container">
+	<p class="components-title">VIEWS Demo</p>
+	<view class="components-item">
+		<movable-area class="components-views-movable-area" scale-area>
+			<movable-view
+				class="components-views-movable-item {{movableItemOutOfBounds ? 'out-of-bounds' : ''}}"
+				direction="all"
+				inertia
+				animation
+				out-of-bounds
+				damping="5"
+				friction="2"
+				bindchange="handleMovableItemChange"
+				bindscale="handleMovableItemScale"
+				htouchmove="handleMovableXTouchmove"
+				vtouchmove="handleMovableYTouchmove"
+			></movable-view>
+		</movable-area>
+	</view>
+	<view class="components-item">
+		<scroll-view
+				class="components-views-scroll-area"
+				scroll-x
+				scroll-y
+				upper-threshold="200"
+				lower-threshold="200"
+				scroll-with-animation
+				scroll-into-view="center"
+				bindscrolltoupper="handleScrollToUpper"
+				bindscrolltolower="handleScrollToLower"
+		>
+			<view class="components-views-scroll-contents">
+				<view class="components-views-scroll-content-upper">UPPER</view>
+				<view class="components-views-scroll-content-center"><p id="center">CENTER</p></view>
+				<view class="components-views-scroll-content-lower">LOWER</view>
+			</view>
+		</scroll-view>
+	</view>
+	<view class="components-item">
+		<swiper
+			class="components-views-swiper-area"
+			indicator-dots
+			autoplay
+			interval="3000"
+			duration="1000"
+			easing-function="easeInOutCubic"
+			circular
+			vertical
+			bindchange="handleSwiperChange"
+		>
+			<swiper-item class="components-views-swiper-item" item-id="item1">item1</swiper-item>
+			<swiper-item class="components-views-swiper-item" item-id="item2">item2</swiper-item>
+			<swiper-item class="components-views-swiper-item" item-id="item3">item3</swiper-item>
+		</swiper>
+	</view>
+	<button bindtap="handleClick" class="testBtn">text</button>
+</view>

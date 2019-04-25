@@ -1,0 +1,38 @@
+<view class="container components-container">
+	<p class="components-title">STEPS DEMO</p>
+	<view class="main-container">
+		<view class="steps-container">
+			<view wx:for="{{steps}}" wx:for-index="idx" wx:for-item="stepName" wx:key="idx" class="steps-wrapper">
+				<view
+					class="steps-item {{idx === currentIdx ? 'is-current' : ''}} {{idx < currentIdx ? 'is-passed' : ''}}"
+				>{{stepName}}</view>
+				<view
+					class="steps-line {{idx < currentIdx ? 'is-passed' : ''}}"
+					wx:if="{{idx < steps.length - 1}}"
+				/>
+			</view>
+		</view>
+
+		<view class="steps-bar-container">
+			<view wx:for="{{steps}}" wx:for-index="idx" wx:for-item="stepName" wx:key="idx" class="steps-bar-wrapper">
+				<view class="steps-bar-item-upper {{idx === currentIdx ? 'is-current' : ''}} {{idx < currentIdx ? 'is-passed' : ''}}"/>
+				<view class="steps-bar-item-lower {{idx === currentIdx ? 'is-current' : ''}} {{idx < currentIdx ? 'is-passed' : ''}}"/>
+				<view class="steps-bar-item-text {{idx === currentIdx ? 'is-current' : ''}} {{idx < currentIdx ? 'is-passed' : ''}}">{{stepName}}</view>
+			</view>
+		</view>
+	</view>
+	<text>steps: {{steps}}</text>
+	<text>currentIdx: {{currentIdx}}</text>
+	<view class="steps-botton-container">
+		<button
+			class="steps-botton {{currentIdx <= 0 ? 'disable' : ''}}"
+			bindtap="handlePrevClick"
+			disable="{{currentIdx <= 0}}"
+		>Prev</button>
+		<button
+			class="steps-botton {{currentIdx >= steps.length - 1 ? 'disable' : ''}}"
+			bindtap="handleNextClick"
+			disable="{{currentIdx >= steps.length - 1}}"
+		>Next</button>
+	</view>
+</view>

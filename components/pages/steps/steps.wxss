@@ -1,0 +1,43 @@
+@import "../../styles/base.wxss";
+@import "../../styles/steps.wxss";
+@import "../../styles/stepsBar.wxss";
+
+.main-container {
+    box-sizing: border-box;
+    position: relative;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.steps-botton-container {
+    box-sizing:border-box;
+    position: relative;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-item: center;
+}
+
+.steps-botton {
+    position: relative;
+    width: 120px;
+    margin: 0;
+    padding: 8px 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #333;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+}
+.steps-botton.disable {
+    color: #DDD;
+    background: rgba(0, 0, 0, .05);
+    border: 1px solid #DDD;
+}
